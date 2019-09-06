@@ -38,5 +38,51 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+let menuItems1 = document.querySelector("a");
+menuItems1.append(siteContent["nav"]["nav-item-1"])
+
+let menuItems2 = document.querySelector("a");
+menuItems2.append(siteContent["nav"]["nav-item-2"])
+
+let menuItems3 = document.querySelector("a");
+menuItems3.append(siteContent["nav"]["nav-item-3"])
+
+let menuItems4 = document.querySelector("a");
+menuItems4.append(siteContent["nav"]["nav-item-4"])
+
+let menuItems5 = document.querySelector("a");
+menuItems5.append(siteContent["nav"]["nav-item-5"])
+
+let menuItems6 = document.querySelector("a");
+menuItems6.append(siteContent["nav"]["nav-item-6"])
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let mainImg = document.getElementById("cta-img");
+mainImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+let headerText = document.querySelector("h1");
+headerText.append(siteContent["cta"]["h1"])
+
+let buttonText = document.querySelector("button");
+buttonText.append(siteContent["cta"]["button"])
+
+let topFeature = document.querySelector("h4");
+topFeature.append(siteContent["main-content"]["features-h4"])
+
+let topParagraph = document.querySelector("p");
+topParagraph.append(siteContent["main-content"]["features-content"])
+
+let topAbout = document.querySelector("h4");
+topAbout.append(siteContent["main-content"]["about-h4"])
+
+let aboutParagraph = document.querySelector("p");
+aboutParagraph.append(siteContent["main-content"]["about-content"])
+
+let centerImage = document.getElementById("middle-img");
+centerImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let bottomServices = document.querySelector("h4");
+bottomServices.append(siteContent["main-content"]["services-h4"])
