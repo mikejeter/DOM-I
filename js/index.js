@@ -98,3 +98,5 @@ address.getElementsByTagName('p')[0].innerText = siteContent['contact']['address
 address.getElementsByTagName('p')[1].innerText = siteContent['contact']['phone'];
 address.getElementsByTagName('p')[2].innerText = siteContent['contact']['email'];
 
+let footer = document.querySelector("footer");
+footer.getElementsByTagName('p')[0].innerText = siteContent['footer']['copyright']
