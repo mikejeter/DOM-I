@@ -90,3 +90,11 @@ mainContent[4].querySelector('p').textContent = siteContent['main-content']["vis
 
 let centerImage = document.getElementById("middle-img");
 centerImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let address = document.querySelector(".contact");
+
+address.getElementsByTagName('h4')[0].innerText = siteContent['contact']['contact-h4'];
+address.getElementsByTagName('p')[0].innerText = siteContent['contact']['address'];
+address.getElementsByTagName('p')[1].innerText = siteContent['contact']['phone'];
+address.getElementsByTagName('p')[2].innerText = siteContent['contact']['email'];
+
