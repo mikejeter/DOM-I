@@ -39,23 +39,25 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 
-let menuItems1 = document.querySelector("a");
-menuItems1.append(siteContent["nav"]["nav-item-1"])
+let menuItems = document.querySelectorAll("a");
 
-let menuItems2 = document.querySelector("a");
-menuItems2.append(siteContent["nav"]["nav-item-2"])
+menuItems[0].setAttribute('class', '.nav-item-1')
+menuItems[0].innerText = "Service";
 
-let menuItems3 = document.querySelector("a");
-menuItems3.append(siteContent["nav"]["nav-item-3"])
+menuItems[1].setAttribute('class', '.nav-item-2')
+menuItems[1].innerText = "Product";
 
-let menuItems4 = document.querySelector("a");
-menuItems4.append(siteContent["nav"]["nav-item-4"])
+menuItems[2].setAttribute('class', '.nav-item-3')
+menuItems[2].innerText = "Vision";
 
-let menuItems5 = document.querySelector("a");
-menuItems5.append(siteContent["nav"]["nav-item-5"])
+menuItems[3].setAttribute('class', '.nav-item-4')
+menuItems[3].innerText = "Features";
 
-let menuItems6 = document.querySelector("a");
-menuItems6.append(siteContent["nav"]["nav-item-6"])
+menuItems[4].setAttribute('class', '.nav-item-5')
+menuItems[4].innerText = "About";
+
+menuItems[5].setAttribute('class', '.nav-item-6')
+menuItems[5].innerText = "Contact";
 
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
@@ -69,20 +71,32 @@ headerText.append(siteContent["cta"]["h1"])
 let buttonText = document.querySelector("button");
 buttonText.append(siteContent["cta"]["button"])
 
-let topFeature = document.querySelector("h4");
-topFeature.append(siteContent["main-content"]["features-h4"])
+let mainContent = document.querySelectorAll(".text-content");
 
-let topParagraph = document.querySelector("p");
-topParagraph.append(siteContent["main-content"]["features-content"])
+mainContent[0].querySelector('h4').textContent = siteContent['main-content']["features-h4"]
+mainContent[0].querySelector('p').textContent = siteContent['main-content']["features-content"]
 
-let topAbout = document.querySelector("h4");
-topAbout.append(siteContent["main-content"]["about-h4"])
+mainContent[1].querySelector('h4').textContent = siteContent['main-content']["about-h4"]
+mainContent[1].querySelector('p').textContent = siteContent['main-content']["about-content"]
 
-let aboutParagraph = document.querySelector("p");
-aboutParagraph.append(siteContent["main-content"]["about-content"])
+mainContent[2].querySelector('h4').textContent = siteContent['main-content']["services-h4"]
+mainContent[2].querySelector('p').textContent = siteContent['main-content']["services-content"]
+
+mainContent[3].querySelector('h4').textContent = siteContent['main-content']["product-h4"]
+mainContent[3].querySelector('p').textContent = siteContent['main-content']["product-content"]
+
+mainContent[4].querySelector('h4').textContent = siteContent['main-content']["vision-h4"]
+mainContent[4].querySelector('p').textContent = siteContent['main-content']["vision-content"]
 
 let centerImage = document.getElementById("middle-img");
 centerImage.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
-let bottomServices = document.querySelector("h4");
-bottomServices.append(siteContent["main-content"]["services-h4"])
+let address = document.querySelector(".contact");
+
+address.getElementsByTagName('h4')[0].innerText = siteContent['contact']['contact-h4'];
+address.getElementsByTagName('p')[0].innerText = siteContent['contact']['address'];
+address.getElementsByTagName('p')[1].innerText = siteContent['contact']['phone'];
+address.getElementsByTagName('p')[2].innerText = siteContent['contact']['email'];
+
+let footer = document.querySelector("footer");
+footer.getElementsByTagName('p')[0].innerText = siteContent['footer']['copyright']
